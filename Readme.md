@@ -132,10 +132,11 @@ Tests for different prompt embeddings and image transformations.
 Use: Helpful for understanding individual components before running the complete DCGAN+CLIP pipeline.
 
 We use Spectral Normalization in the generator network (ConditionalGenerator) to stabilize GAN training by constraining the Lipschitz constant of each layer.
-✅ Helps prevent exploding gradients.
-✅ Encourages smoother updates during optimization.
-✅ Especially beneficial when combined with CLIP-based feedback, which can be unstable.
-its implemented like:
+- Helps prevent exploding gradients.
+- Encourages smoother updates during optimization.
+- Specially beneficial when combined with CLIP-based feedback, which can be unstable.
+  
+Its implemented like:
 from torch.nn.utils import spectral_norm
 self.model = nn.Sequential(
     spectral_norm(nn.ConvTranspose2d(...)),
