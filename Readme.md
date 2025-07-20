@@ -1,7 +1,6 @@
-////// Note //////////
 GradeScope 8.2: Our evaluation is based on prompts given by the users so there are no real images corresponding to the prompts.
 
-# Vedant Padole, Madhumita Katam, Kavish Patel
+## Team 4-B: Vedant Padole, Madhumita Katam, Kavish Patel
 # Dataset Setup for DiffusionCLIP
 
 This repository provides a dataset preparation utility for training and evaluating models such as DiffusionCLIP. It supports downloading, extracting, and reformatting **ImageNet-128** and **Tiny-ImageNet** datasets for machine learning workflows. It also includes a Jupyter Notebook for DiffusionCLIP-based image manipulation and translation tasks.
@@ -81,7 +80,7 @@ For `ImageNet-128`, a HuggingFace token may be required for streaming.
 ---
 
 
-/////////////////// File Name :- CLIPGuidedDiffusion.ipynb ///////////////////////////////
+## File Name :- CLIPGuidedDiffusion.ipynb
 
 Demonstrates: Integration of a basic Diffusion Model with CLIP for text-driven image generation
 How to run:
@@ -91,8 +90,7 @@ Run all the cells to get the required outputs. The explanation of the results ar
 (Due to computational constraints, we decided to use a pretrained model. The model that we took reference from do not account for CLIP loss
 We have added the clip loss into the training function and ran on the promts that are specified by user)
 
-
-/////////////////// File Name :- VQGAN+CLIP (with Pooling). ipynb /////////////////
+## File Name :- VQGAN+CLIP (with Pooling). ipynb
 
 This notebook implements a modified VQGAN+CLIP pipeline that incorporates average and max pooling into the MakeCutouts class, enhancing text-image alignment for better generation quality.
 
@@ -116,8 +114,7 @@ Fix: edit the file: /content/taming-transformers/taming/data/utils.py find the l
 
 The notebook modifies the default MakeCutouts behavior to use average and max pooling to potentially improve semantic coherence between text and image.
 
-
-/////////////////// File Name :- DCGAN+CLIP. ipynb ///////////////////////////////
+## File Name :- DCGAN+CLIP. ipynb 
 
 Demonstrates: Integration of a basic DCGAN architecture with CLIP for text-driven image generation
 Objective: Investigate how traditional GANs (like DCGAN) can be steered using CLIP embeddings to produce semantically relevant visuals.
@@ -126,7 +123,7 @@ A latent vector is passed through a DCGAN generator to produce images.
 The image is then evaluated using CLIP to compare its embedding against the embedding of a given text prompt.
 The latent vector is optimized to reduce the distance between these embeddings, effectively aligning the generated image with the text.
 
-/////////////////// File Name :- Untitled.ipynb ///////////////////////////////////
+## File Name :- DCGAN_test.ipynb
 Goal: Functions as a sandbox/testing notebook for DCGAN+CLIP integration
 What it includes:
 Code to visualize DCGAN outputs.
